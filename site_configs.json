@@ -1,0 +1,200 @@
+[
+  {
+    "site_num": 1,
+    "site_name": "文莱婆罗洲公报网",
+    "country": "brunei",
+    "media": "borneobulletin",
+    "encoding": "utf-8",
+    "entry_url": "http://borneobulletin.com.bn/",
+    "xpath_nav_url": "//*[@id='menu-news-category-1']/li/a/@href",
+    "xpath_news_url": "//div[@class='td-block-span6']//h3/a/@href",
+    "xpath_next_page": "",
+    "xpath_news_data": {
+      "xpath_news_type": "//*[@class='entry-category']//text()",
+      "xpath_news_title": "//*[@class='entry-title']//text()",
+      "xpath_abstract": "",
+      "xpath_author": "//div[@class='td-post-content tagdiv-type']/p[1]/text()",
+      "xpath_public_date": "//header//time//text()",
+      "xpath_news_content": "//div[@class='td-post-content tagdiv-type']//text()"
+    },
+    "datetime_formatter": "datetime_handler",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 2,
+    "site_name": "马来西亚国家通讯社网",
+    "country": "malaysia",
+    "media": "bernama",
+    "encoding": "utf-8",
+    "entry_url": "https://www.bernama.com/bm/",
+    "xpath_nav_url": "//*[@class='dropdown-menu dropdown-menu-left']//a[starts-with(@href,'http')]/@href",
+    "xpath_news_url": "//div[@class='col-sm-12 col-md-12 col-lg-12']//h7/a/@href",
+    "xpath_next_page": "",
+    "xpath_news_data": {
+      "xpath_news_type": "",
+      "xpath_news_title": "//*[@class='carousel-2-caption']//text()",
+      "xpath_abstract": "",
+      "xpath_author": "",
+      "xpath_public_date": "//div[@class='mr-3 text-right']//text()",
+      "xpath_news_content": "//div[@class='col-sm-12 col-md-12 col-lg-12'][2]//p/text()"
+    },
+    "datetime_formatter": "%d/%m/%Y %I:%M %p",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 3,
+    "site_name": "马来西亚华社研究中心网",
+    "country": "malaysia",
+    "media": "malaysian_chinese",
+    "entry_url": "http://www.malaysian-chinese.net/newsevents",
+    "encoding": "gbk",
+    "xpath_nav_url": "//*[@align='right']//a[contains(text(),'更多>>')]/@href",
+    "xpath_news_url": "//span[@class='style14']/following-sibling::a[1]/@href",
+    "xpath_next_page": "//*[@class='list_page']//a[contains(text(),'下一页')]/@href",
+    "xpath_news_data": {
+      "xpath_news_type": "//a[contains(text(),'新闻动态')]/following-sibling::a/text()",
+      "xpath_news_title": "//div[@align='center']/span[@class='style1']/strong/text()",
+      "xpath_abstract": "",
+      "xpath_author": "",
+      "xpath_public_date": "substring(//div[@align='center']/span[contains(text(),'时间')]/text(),4,10)",
+      "xpath_news_content": "//td[@class='news_list']//tr[6]//text()"
+    },
+    "datetime_formatter": "%Y-%m-%d",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 4,
+    "site_name": "火箭报网 (英文)",
+    "country": "malaysia",
+    "media": "therocket",
+    "encoding": "utf-8",
+    "entry_url": "https://www.therocket.com.my/en/",
+    "xpath_nav_url": "//nav//li/a/@href",
+    "xpath_news_url": "//h2[@class='entry-title']//a/@href",
+    "xpath_next_page": "//a[@class='nextpostslink']/@href",
+    "xpath_news_data": {
+      "xpath_news_type": "//div[@class='entry-cats']/a/text()",
+      "xpath_news_title": "//h1[@class='entry-title']//text()",
+      "xpath_abstract": "(//p/strong)[1]/text()",
+      "xpath_author": "(//p/strong)[2]/text()",
+      "xpath_public_date": "//time[1]/text()",
+      "xpath_news_content": "//article[contains(@class,'single-entry')]//p/text()"
+    },
+    "datetime_formatter": "datetime_handler",
+    "mode": "whole_site",
+    "method": "requests"
+  },
+  {
+    "site_num": 5,
+    "site_name": "马尼拉时报网（菲律宾）",
+    "country": "philippine",
+    "media": "manilatimes",
+    "encoding": "utf-8",
+    "entry_url": "https://www.manilatimes.net/",
+    "xpath_nav_url": "//*[@id='tdb-block-menu']//a/@href",
+    "xpath_news_url": "//div[contains(@class,'tdb-block-inner')]//h3[contains(@class, 'entry-title')]/a/@href",
+    "xpath_next_page": "//i[contains(@class,'td-icon-menu-right')]/../@href",
+    "xpath_news_data": {
+      "xpath_news_type": "//a[@class='tdb-entry-category']/../a[last()]/text()",
+      "xpath_news_title": "//meta[@property='og:title']/@content",
+      "xpath_abstract": "//meta[@property='og:description']/@content",
+      "xpath_author": "//a[@class='tdb-author-name']/text()",
+      "xpath_public_date": "//meta[@itemprop='datePublished']/@content",
+      "xpath_news_content": "//div[contains(@class, td-fix-index)]/p/text()"
+    },
+    "datetime_formatter": "%Y-%m-%dT%H:%M:%S+00:00",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 6,
+    "site_name": "柬埔寨金边邮报网",
+    "country": "cambodia",
+    "media": "postkhmer",
+    "encoding": "utf-8",
+    "entry_url": "https://www.postkhmer.com/",
+    "xpath_nav_url": "//*[@id='superfish-5']/child::li/a/@href",
+    "xpath_news_url": "",
+    "xpath_next_page": "//ul[contains(@class,'pager-load-more')]//a/@href",
+    "xpath_news_data": {
+      "xpath_news_type": "",
+      "xpath_news_title": "//meta[@property='og:title']/@content",
+      "xpath_abstract": "//meta[@name='description']/@content",
+      "xpath_author": "//div[@class='article-author-wrapper']//span[@itemprop='name']/text()",
+      "xpath_public_date": "//div[@class='article-author-wrapper']/p/text()[2]",
+      "xpath_news_content": "//div[@itemprop='articleBody']//p/text()"
+    },
+    "datetime_formatter": "datetime_handler",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 7,
+    "site_name": "越南青年报",
+    "country": "vietnam",
+    "media": "tuoitre",
+    "encoding": "utf-8",
+    "entry_url": "http://tuoitre.vn/",
+    "xpath_nav_url": "//*[@id=‘admWrapsite’]/div/header/div[4]/div[1]/ul/li/a/@href",
+    "xpath_news_url": "",
+    "xpath_next_page": "",
+    "xpath_news_data": {
+      "xpath_news_type": "",
+      "xpath_news_title": "",
+      "xpath_abstract": "",
+      "xpath_author": "",
+      "xpath_public_date": "",
+      "xpath_news_content": ""
+    },
+    "datetime_formatter": "",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 8,
+    "site_name": "越南快讯网",
+    "country": "vietnam",
+    "media": "vnexpress",
+    "encoding": "utf-8",
+    "entry_url": "https://vnexpress.net/",
+    "xpath_nav_url": "//*[@id='wrap-main-nav']/section//ul[contains(@class,'cat-menu')]/li/a/@href",
+    "xpath_news_url": "//div[@data-campaign='Stream']//article/p/a/@href",
+    "xpath_next_page": "//div[contains(@class,'button-page')]/a[last()]/@href",
+    "xpath_news_data": {
+      "xpath_news_type": "//ul[@class='breadcrumb']/li[last()]/a/@href",
+      "xpath_news_title": "//h1[@class='title-detail']/text()",
+      "xpath_abstract": "//p[@class='description']/text()",
+      "xpath_author": "//meta[@name='author']/@content",
+      "xpath_public_date": "//meta[@itemprop='datePublished']/@content",
+      "xpath_news_content": "//article[@class='fck_detail ']/p[@class='Normal']/text()"
+    },
+    "datetime_formatter": "%Y-%m-%d",
+    "mode": "latest_news",
+    "method": "requests"
+  },
+  {
+    "site_num": 9,
+    "site_name": "老挝新闻社",
+    "country": "laos",
+    "media": "kpl_gov_la",
+    "encoding": "utf-8",
+    "entry_url": "https://www.vientianemai.net/",
+    "xpath_nav_url": "//ul[contains(@class,'nav-menu')]//a/@href",
+    "xpath_news_url": "//main//div[contains(@class,'col-sm-6')]//header//div[@class='date']/a/@href",
+    "xpath_next_page": "//a[contains(@class,'next')]/@href",
+    "xpath_news_data": {
+      "xpath_news_type": "//main//a[contains(@rel,'category')]/text()",
+      "xpath_news_title": "//main//h1[@class='entry-title']/text()",
+      "xpath_abstract": "//meta[@property='og:description']/@content",
+      "xpath_author": "//main//div[contains(@class,'by-author')]/a/text()",
+      "xpath_public_date": "//main//div[@class='date']/a/text()",
+      "xpath_news_content": "//main//div[@class='entry-content']//p/text()"
+    },
+    "datetime_formatter": "%d/%m/%Y", 
+    "mode": "latest_news",
+    "method": "requests"
+  }
+]
